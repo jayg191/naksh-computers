@@ -156,15 +156,14 @@ export function HeroSection() {
       
       {/* Laptop Image */}
       <div className="mt-8 flex justify-center">
-        <Image
-          src="/images/hero/hero-laptop.png"
-          alt="HP Laptop"
-          width={400}
-          height={300}
-          className="w-full max-w-[380px] lg:max-w-[430px] h-auto drop-shadow-2xl transition-all duration-500 hover:scale-105"
-          priority
-          className="drop-shadow-2xl transition-all duration-500 hover:scale-105"
-        />
+      <Image
+        src="/images/hero/hero-laptop.png"
+        alt="HP Laptop"
+        width={430}
+        height={320}
+        priority
+        className="w-full max-w-[380px] lg:max-w-[430px] h-auto drop-shadow-2xl transition-all duration-500 hover:scale-105"
+      />
       </div>
 
       {/* Brand Chips */}

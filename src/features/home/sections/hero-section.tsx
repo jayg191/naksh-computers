@@ -117,17 +117,7 @@ export function HeroSection() {
     <div className="relative w-full max-w-lg rounded-[30px] border border-slate-200 bg-white p-6 sm:p-8 shadow-2xl">
 
       {/* Google Rating */}
-      <div
-          className="absolute top-16 right-4 lg:top-6 lg:-right-5 rounded-xl bg-white px-3 py-2 lg:px-5 lg:py-4 shadow-xl border z-20"
-        >
-        <p className="text-xs text-slate-500">
-          Google Rating
-        </p>
-
-        <p className="mt-1 text-xl font-bold text-green-600">
-          ⭐ 4.9 / 5
-        </p>
-      </div>
+      
 
       {/* Reviews */}
       

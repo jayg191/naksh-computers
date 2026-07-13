@@ -92,7 +92,7 @@ export function TestimonialsSection() {
 
                 </div>
 
-                
+                <a
                   href="https://www.google.com/maps/place/Naksh+Computers/@23.0280114,72.5673057,17z/data=!4m8!3m7!1s0x395e848a43dedb61:0xf6f23f4d61a9000b!8m2!3d23.0280065!4d72.5698806!9m1!1b1!16s%2Fg%2F1pwfxx1b6?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -115,14 +115,13 @@ export function TestimonialsSection() {
 
         {/* Review Cards */}
 
-        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:snap-none sm:grid-cols-2 sm:gap-8 sm:overflow-visible sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden">
+        <div className="grid gap-8 lg:grid-cols-3">
 
           {TESTIMONIALS.map((review,index)=>(
 
             <AnimateOnScroll
               key={review.id}
               delay={index*0.1}
-              className="w-[85vw] min-w-[300px] max-w-[340px] shrink-0 snap-center sm:w-auto sm:min-w-0 sm:max-w-none sm:shrink"
             >
 
               <div className="group flex h-full flex-col rounded-[28px] border border-border bg-card p-8 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
@@ -195,7 +194,7 @@ export function TestimonialsSection() {
 
                     </div>
 
-                    
+                    <a
                       href="https://www.google.com/maps/place/Naksh+Computers/@23.0280065,72.5698806,17z"
                       target="_blank"
                       rel="noopener noreferrer"

@@ -41,9 +41,9 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
 
   return (
     <motion.div ref={ref} variants={fadeInUp} className="text-center">
-      <p className="font-heading text-4xl font-bold text-white md:text-5xl">
-        {isInView ? displayValue : value}
-      </p>
+      <p className="font-heading text-[28px] sm:text-4xl md:text-5xl font-bold text-white whitespace-nowrap">
+          {isInView ? displayValue : value}
+        </p>
       <p className="mt-2 text-sm font-medium text-brand-200/70">{label}</p>
     </motion.div>
   );

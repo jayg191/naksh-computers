@@ -85,19 +85,24 @@ export default function ServicesPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            
-              href="tel:+919924230096"
-              className="rounded-xl bg-primary px-6 py-3 text-white font-semibold inline-flex items-center gap-2"
-            >
-              <Phone className="h-5 w-5" /> Call Now
-            </a>
-            
-              href="https://wa.me/919924230096"
-              target="_blank"
-              className="rounded-xl border px-6 py-3 font-semibold inline-flex items-center gap-2"
-            >
-              <MessageCircle className="h-5 w-5" /> WhatsApp
-            </a>
+              <a
+                href="tel:+919924230096"
+                className="rounded-xl bg-primary px-6 py-3 text-white font-semibold inline-flex items-center gap-2"
+              >
+                <Phone className="h-5 w-5" />
+                Call Now
+              </a>
+
+              <a
+                href="https://wa.me/919924230096"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border px-6 py-3 font-semibold inline-flex items-center gap-2"
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -157,18 +162,20 @@ export default function ServicesPage() {
 
                 {/* Button */}
                 
-                  href={
-                    "https://wa.me/919924230096?text=" +
-                    encodeURIComponent(
-                      "Hi, I'm interested in " + service.title
-                    )
-                  }
-                  target="_blank"
-                  className="mt-4 inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-lg bg-primary text-xs font-semibold text-white transition-all duration-300 hover:bg-primary/90 sm:mt-6 sm:h-11 sm:gap-2 sm:rounded-xl sm:text-sm"
-                >
-                  Get Service
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 sm:h-4 sm:w-4" />
-                </a>
+                <a
+                href={
+                  "https://wa.me/919924230096?text=" +
+                  encodeURIComponent(
+                    "Hi, I'm interested in " + service.title
+                  )
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-lg bg-primary text-xs font-semibold text-white transition-all duration-300 hover:bg-primary/90 sm:mt-6 sm:h-11 sm:gap-2 sm:rounded-xl sm:text-sm"
+              >
+                Get Service
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 sm:h-4 sm:w-4" />
+              </a>
               </article>
             );
           })}
@@ -255,6 +262,7 @@ export default function ServicesPage() {
 
                 <div className="mt-8 flex flex-wrap gap-4">
                   
+                <a
                     href="tel:+919924230096"
                     className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-primary transition hover:scale-105"
                   >
@@ -262,9 +270,10 @@ export default function ServicesPage() {
                     Call Now
                   </a>
 
-                  
+                  <a
                     href="https://wa.me/919924230096"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-xl border border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-primary"
                   >
                     <MessageCircle className="h-5 w-5" />

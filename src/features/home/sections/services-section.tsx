@@ -57,7 +57,7 @@ export function ServicesSection() {
                   <div className="flex size-12 md:size-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:-rotate-1">
                     <Icon className="size-6" strokeWidth={1.75} />
                   </div>
-                  <h3 className="mt-4 font-heading text-lg md:text-xl font-bold text-foreground"className="mt-5 font-heading text-xl font-bold text-foreground">
+                  <h3 className="mt-4 font-heading text-lg md:text-xl font-bold text-foreground">
                     {service.title}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">

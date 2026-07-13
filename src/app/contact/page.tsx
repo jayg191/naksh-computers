@@ -105,11 +105,18 @@ export default function ContactPage() {
 
             <input
               className="w-full rounded-xl border p-3"
+              placeholder="Full Name"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+            />
+
+            <input
+              className="w-full rounded-xl border p-3"
               placeholder="Phone Number"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
-            <input className="w-full rounded-xl border p-3" placeholder="Phone Number" />
+            
             <input
               type="email"
               className="w-full rounded-xl border p-3"

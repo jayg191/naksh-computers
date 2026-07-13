@@ -1,46 +1,45 @@
 export default function Brands() {
-    return (
-      <section className="bg-white py-24">
-        <div className="container mx-auto px-6">
-  
-          <div className="text-center mb-14">
-            <p className="text-cyan-600 font-semibold uppercase tracking-[0.25em]">
-              Trusted Brands
-            </p>
-  
-            <h2 className="mt-4 text-5xl font-bold text-slate-900">
-              We Sell Top Brands
-            </h2>
-  
-            <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto">
-              Genuine products from the world's leading technology manufacturers.
-            </p>
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
-            {[
-                "HP",
-                "Dell",
-                "Lenovo",
-                "ASUS",
-                "Acer",
-                "MSI",
-                "Canon",
-                "Epson",
-                "TP-Link",
-                "D-Link",
-                "WD",
-                "Seagate",
-            ].map((brand) => (
-                <div
-                key={brand}
-                className="flex h-24 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-xl font-bold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:bg-white hover:text-cyan-600 hover:shadow-xl"
-                >
-                {brand}
-                </div>
-            ))}
-            </div>
-          </div>
-  
+  return (
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="mb-10 text-center sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-600 sm:text-sm">
+            Trusted Brands
+          </p>
+
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:mt-4 sm:text-4xl lg:text-5xl">
+            We Sell Top Brands
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:mt-6 sm:text-lg">
+            Genuine products from the world&apos;s leading technology manufacturers.
+          </p>
         </div>
-      </section>
-    );
-  }
+
+        <div className="grid grid-cols-4 gap-3 sm:gap-5 lg:grid-cols-6 lg:gap-6">
+          {[
+            "HP",
+            "Dell",
+            "Lenovo",
+            "ASUS",
+            "Acer",
+            "MSI",
+            "Canon",
+            "Epson",
+            "TP-Link",
+            "D-Link",
+            "WD",
+            "Seagate",
+          ].map((brand) => (
+            <div
+              key={brand}
+              className="group flex h-[70px] items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-2 text-center text-sm font-bold text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:bg-white hover:text-cyan-600 hover:shadow-xl sm:h-24 sm:rounded-2xl sm:text-xl"
+            >
+              {brand}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -221,7 +221,7 @@ export default function ContactPage() {
       <section className="bg-slate-950 py-20 text-white">
         <div className="container mx-auto px-6 text-center">
 
-          <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-extrabold tracking-tight text-white">
             Need Immediate IT Support?
           </h2>
 

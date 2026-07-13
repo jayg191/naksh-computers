@@ -1,3 +1,5 @@
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { SITE_CONFIG } from "@/constants";
@@ -124,6 +126,7 @@ export default function RootLayout({
       className={`${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+      <GoogleAnalytics />
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{

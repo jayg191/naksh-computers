@@ -93,7 +93,7 @@ export function TestimonialsSection() {
                 </div>
 
                 <a
-                  href="https://www.google.com/maps/place/Naksh+Computers/@23.0280065,72.5698806,17z"
+                  href="https://www.google.com/maps/place/Naksh+Computers/@23.0280114,72.5673057,17z/data=!4m8!3m7!1s0x395e848a43dedb61:0xf6f23f4d61a9000b!8m2!3d23.0280065!4d72.5698806!9m1!1b1!16s%2Fg%2F1pwfxx1b6?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-blue-700 transition hover:scale-105"
@@ -250,18 +250,7 @@ export function TestimonialsSection() {
 
               </p>
 
-              <a
-                href="https://www.google.com/maps/place/Naksh+Computers/@23.0280065,72.5698806,17z"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-
-                View All Google Reviews
-
-                <ExternalLink className="h-5 w-5"/>
-
-              </a>
+              
 
             </div>
 

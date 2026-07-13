@@ -14,6 +14,27 @@ import {
 
 export default function ContactPage() {
   const [service, setService] = useState("Laptop Repair");
+    const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const whatsappMessage = encodeURIComponent(`
+    *New Enquiry from Website*
+    
+    👤 Full Name: ${fullName}
+    
+    📞 Phone: ${phone}
+    
+    📧 Email: ${email}
+    
+    🛠️ Service: ${service}
+    
+    💬 Message:
+    ${message}
+    `);
+    
+    const whatsappUrl = `https://wa.me/919924230096?text=${whatsappMessage}`;
 
   return (
     <main className="bg-background">
@@ -82,9 +103,20 @@ export default function ContactPage() {
           <form className="rounded-3xl border bg-card p-8 shadow-sm space-y-5">
             <h2 className="text-3xl font-bold">Send an Enquiry</h2>
 
-            <input className="w-full rounded-xl border p-3" placeholder="Full Name" />
+            <input
+              className="w-full rounded-xl border p-3"
+              placeholder="Phone Number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
             <input className="w-full rounded-xl border p-3" placeholder="Phone Number" />
-            <input className="w-full rounded-xl border p-3" placeholder="Email Address" />
+            <input
+              type="email"
+              className="w-full rounded-xl border p-3"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
             <select
               className="w-full rounded-xl border p-3"
@@ -101,12 +133,19 @@ export default function ContactPage() {
               <option>Other</option>
             </select>
 
-            <textarea className="h-36 w-full rounded-xl border p-3" placeholder="Message"/>
+              <textarea
+              className="h-36 w-full rounded-xl border p-3"
+              placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
 
-            <a
-              href="https://wa.me/919924230096"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-semibold text-white"
-            >
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-semibold text-white"
+              >
               Send via WhatsApp
               <ArrowRight className="h-4 w-4"/>
             </a>

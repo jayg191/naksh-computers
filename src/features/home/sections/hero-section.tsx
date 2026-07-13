@@ -33,7 +33,7 @@ export function HeroSection() {
       <div className="absolute -bottom-20 -left-20 size-[400px] rounded-full bg-info/5 blur-3xl" />
 
       <Container className="relative section-padding-lg">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
+      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] xl:grid-cols-[1.1fr_0.9fr] lg:gap-16 xl:gap-20">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -48,24 +48,24 @@ export function HeroSection() {
             </motion.div>
 
             <motion.h1
-              variants={fadeInUp}
-              className="mt-6 font-heading text-[42px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-7xl"
-            >
-              <span className="block whitespace-nowrap">
-                Complete Computer
-              </span>
+                  variants={fadeInUp}
+                  className="mt-6 font-heading font-extrabold tracking-tight leading-[1.02]"
+                >
+                  <span className="block text-[3rem] sm:text-[3.8rem] lg:text-[5rem] xl:text-[5.8rem] text-foreground">
+                    Complete Computer
+                  </span>
 
-              <span className="block text-primary">
-                &amp; IT Solutions
-              </span>
+                  <span className="block text-[3rem] sm:text-[3.8rem] lg:text-[5rem] xl:text-[5.8rem] text-primary">
+                    &amp; IT Solutions
+                  </span>
 
-              <span className="block text-foreground">
-                for Ahmedabad
-              </span>
-            </motion.h1>
+                  <span className="block text-[3rem] sm:text-[3.8rem] lg:text-[5rem] xl:text-[5.8rem] text-foreground">
+                    for Ahmedabad
+                  </span>
+                </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground"
+              className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg"
             >
               Laptop Sales, Desktop Computers, Printer Services,
               CCTV Installation, Networking Solutions and Expert
@@ -74,7 +74,7 @@ export function HeroSection() {
 
             <motion.div
               variants={fadeInUp}
-              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+              className="mt-8 flex flex-col sm:flex-row gap-4"
             >
               
               
@@ -112,7 +112,7 @@ export function HeroSection() {
   initial="hidden"
   animate="visible"
   variants={slideInRight}
-  className="relative hidden lg:flex items-center justify-center"
+  className="relative flex justify-center mt-12 lg:mt-0"
 >
   <div className="relative w-full max-w-xl">
 
@@ -120,10 +120,10 @@ export function HeroSection() {
     <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-cyan-400/20 to-blue-600/10 blur-3xl" />
 
     {/* Main Card */}
-    <div className="relative rounded-[32px] border border-slate-200 bg-white p-8 shadow-2xl">
+    <div className="relative w-full max-w-lg rounded-[30px] border border-slate-200 bg-white p-6 sm:p-8 shadow-2xl">
 
       {/* Google Rating */}
-      <div className="absolute -right-5 top-6 rounded-2xl bg-white px-5 py-4 shadow-xl border">
+      <div className="absolute right-4 top-4 lg:-right-5 lg:top-6 rounded-2xl bg-white px-5 py-4 shadow-xl border">
         <p className="text-xs text-slate-500">
           Google Rating
         </p>
@@ -159,15 +159,16 @@ export function HeroSection() {
         <Image
           src="/images/hero/hero-laptop.png"
           alt="HP Laptop"
-          width={430}
-          height={320}
+          width={400}
+          height={300}
+          className="w-full max-w-[380px] lg:max-w-[430px] h-auto drop-shadow-2xl transition-all duration-500 hover:scale-105"
           priority
           className="drop-shadow-2xl transition-all duration-500 hover:scale-105"
         />
       </div>
 
       {/* Brand Chips */}
-      <div className="mt-8 flex flex-wrap justify-center gap-3">
+      <div className="mt-8 flex flex-wrap justify-center gap-2">
 
         {[
           "HP",
@@ -195,7 +196,7 @@ export function HeroSection() {
 
       {/* Features */}
 
-      <div className="mt-10 grid grid-cols-2 gap-4">
+      <div className="mt-10 grid grid-cols-2 gap-3">
 
         <div className="rounded-xl bg-slate-50 p-4">
           <p className="font-semibold">

@@ -54,7 +54,7 @@ export function ServicesSection() {
 )}
                 >
                 <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <<div className="flex size-12 md:size-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:-rotate-1">
+                  <div className="flex size-12 md:size-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:-rotate-1">
                     <Icon className="size-6" strokeWidth={1.75} />
                   </div>
                   <h3 className="mt-4 font-heading text-lg md:text-xl font-bold text-foreground"className="mt-5 font-heading text-xl font-bold text-foreground">

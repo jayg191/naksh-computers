@@ -85,25 +85,26 @@ export default function ServicesPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="tel:+919924230096"
-                className="rounded-xl bg-primary px-6 py-3 text-white font-semibold inline-flex items-center gap-2"
-              >
-                <Phone className="h-5 w-5" />
-                Call Now
-              </a>
 
-              <a
-                href="https://wa.me/919924230096"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl border px-6 py-3 font-semibold inline-flex items-center gap-2"
-              >
-                <MessageCircle className="h-5 w-5" />
-                WhatsApp
-              </a>
-            
-          </div>
+          <a
+            href="tel:+919924230096"
+            className="rounded-xl bg-primary px-6 py-3 text-white font-semibold inline-flex items-center gap-2"
+          >
+            <Phone className="h-5 w-5" />
+            Call Now
+          </a>
+
+          <a
+            href="https://wa.me/919924230096"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl border px-6 py-3 font-semibold inline-flex items-center gap-2"
+          >
+            <MessageCircle className="h-5 w-5" />
+            WhatsApp
+          </a>
+
+        </div>
         </div>
       </section>
 
@@ -165,9 +166,7 @@ export default function ServicesPage() {
                 <a
                 href={
                   "https://wa.me/919924230096?text=" +
-                  encodeURIComponent(
-                    "Hi, I'm interested in " + service.title
-                  )
+                  encodeURIComponent("Hi, I'm interested in " + service.title)
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -182,18 +181,36 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-20">
-        <h2 className="text-center text-4xl font-bold">Industries We Serve</h2>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {/* Industries We Serve - upgraded premium enterprise section */}
+      <section className="container mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14 lg:mb-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary sm:text-sm sm:tracking-[0.3em]">
+            Who We Serve
+          </p>
+          <h2 className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl lg:text-5xl">
+            Industries We Serve
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-muted-foreground sm:mt-5 sm:text-lg sm:leading-8">
+            Trusted IT support tailored to the needs of homes, students,
+            businesses and offices across Ahmedabad.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 items-stretch gap-3 sm:gap-5 md:gap-6 lg:grid-cols-4 lg:gap-6">
           {industries.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-2xl border bg-card p-8 text-center"
+                className="group flex h-full min-h-[140px] flex-col items-center justify-center rounded-2xl border border-border bg-card p-4 text-center shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:border-primary/30 hover:shadow-[0_20px_50px_rgba(37,99,235,0.16)] sm:min-h-[200px] sm:rounded-3xl sm:p-8"
               >
-                <Icon className="mx-auto h-10 w-10 text-primary" />
-                <h3 className="mt-5 text-xl font-semibold">{item.title}</h3>
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-1 sm:size-16 sm:rounded-2xl">
+                  <Icon className="size-6 sm:size-8" strokeWidth={1.75} />
+                </div>
+
+                <h3 className="mt-3 line-clamp-2 text-sm font-bold leading-snug sm:mt-5 sm:text-xl">
+                  {item.title}
+                </h3>
               </div>
             );
           })}
@@ -261,7 +278,7 @@ export default function ServicesPage() {
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
-                  
+
                 <a
                     href="tel:+919924230096"
                     className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-primary transition hover:scale-105"
@@ -279,6 +296,7 @@ export default function ServicesPage() {
                     <MessageCircle className="h-5 w-5" />
                     Chat on WhatsApp
                   </a>
+
                 </div>
               </div>
             </div>

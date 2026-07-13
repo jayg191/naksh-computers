@@ -49,13 +49,19 @@ export function HeroSection() {
 
             <motion.h1
               variants={fadeInUp}
-              className="mt-6 font-heading text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground lg:text-7xl"
+              className="mt-6 font-heading text-[42px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-7xl"
             >
-              Complete Computer
-              <br />
-              <span className="text-primary">&amp; IT Solutions</span>
-              <br />
-              <span className="text-foreground">for Ahmedabad</span>
+              <span className="block whitespace-nowrap">
+                Complete Computer
+              </span>
+
+              <span className="block text-primary">
+                &amp; IT Solutions
+              </span>
+
+              <span className="block text-foreground">
+                for Ahmedabad
+              </span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}

@@ -17,6 +17,15 @@ const highlights = [
 ] as const;
 
 export function HeroSection() {
+  const whatsappMessage = encodeURIComponent(`Hello,
+
+    I recently visited your website and I'm interested in your products and services.
+    
+    Please help me choose the best option based on my requirements and share the pricing/details.
+    
+    Looking forward to your response.
+    
+    Thank you!`);
   return (
     <section className="relative overflow-hidden pt-20 md:pt-24 lg:pt-28">
       <div className="absolute inset-0 gradient-brand-subtle" />
@@ -62,11 +71,13 @@ export function HeroSection() {
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
               
+              
               <Button
               render={
                 <a
-                  href="https://wa.me/919924230096"
+                  href={`https://wa.me/919924230096?text=${whatsappMessage}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                 />
               }
               className="h-12 px-8 bg-primary text-white hover:bg-primary/90 shadow-brand"

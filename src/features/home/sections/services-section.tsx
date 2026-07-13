@@ -49,7 +49,7 @@ export function ServicesSection() {
               <AnimateOnScroll key={service.id} delay={index * 0.08}>
                 <article
                   className={cn(
-                    "className={cn(
+                    
   "group relative flex min-h-[260px] md:min-h-[320px] flex-col rounded-2xl border border-border bg-white p-4 md:p-7 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_20px_60px_rgba(37,99,235,0.18)]"
 )}
                 >

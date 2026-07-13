@@ -118,18 +118,7 @@ export function HeroSection() {
 
       {/* Google Rating */}
       <div
-          className="
-            absolute
-            top-4 right-4
-            lg:-right-5 lg:top-6
-            rounded-2xl
-            bg-white
-            px-4 py-3
-            lg:px-5 lg:py-4
-            shadow-xl
-            border
-            z-20
-          "
+          className="absolute top-16 right-4 lg:top-6 lg:-right-5 rounded-xl bg-white px-3 py-2 lg:px-5 lg:py-4 shadow-xl border z-20"
         >
         <p className="text-xs text-slate-500">
           Google Rating
@@ -144,7 +133,7 @@ export function HeroSection() {
       
 
       {/* Badge */}
-      <span className="rounded-full bg-cyan-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-700">
+      <span className="inline-flex whitespace-nowrap rounded-full bg-cyan-100 px-4 py-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">
         Authorized Computer Store
       </span>
 

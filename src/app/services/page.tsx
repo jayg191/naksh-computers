@@ -102,7 +102,7 @@ export default function ServicesPage() {
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp
               </a>
-            </div>
+            
           </div>
         </div>
       </section>

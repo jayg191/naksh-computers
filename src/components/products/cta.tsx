@@ -21,9 +21,12 @@ export default function CTA() {
               Contact Our Experts
             </button>
   
-            <button className="rounded-xl border border-slate-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10">
-              Call Now
-            </button>
+            <a
+            href="tel:+919924230096"
+            className="inline-flex items-center justify-center rounded-xl border border-slate-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10"
+          >
+            Call Now
+          </a>
           </div>
   
         </div>

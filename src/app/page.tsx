@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import InquiryPopup from "@/components/ui/inquirypopup";
 import { Footer, Header } from "@/components/layout";
+
 import {
   BrandsSection,
   CtaSection,
@@ -29,6 +30,7 @@ export default function HomePage() {
   
       <main>
         <HeroSection />
+        
         <ServicesSection />
         <FeaturedProductsSection />
         <WhyChooseUsSection />

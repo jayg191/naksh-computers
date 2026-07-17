@@ -255,5 +255,5 @@ export const CTA_CONTENT = {
   subheadline:
     "Get a free consultation and customized quote from our enterprise solutions team. No obligation, expert advice guaranteed.",
   primaryCta: { label: "Request a Quote", href: "/contact" },
-  secondaryCta: { label: "Call Us Now", href: "tel:+9100000000000" },
+  secondaryCta: { label: "Call Us Now", href: "tel:+919924230096" },
 } as const;

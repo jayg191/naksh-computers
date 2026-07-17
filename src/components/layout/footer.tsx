@@ -261,16 +261,16 @@ export function Footer() {
                 <ExternalLink className="h-4 w-4" />
 
               </a>
-
+              </div>
             
 
           
 
         
 
-        {/* Bottom */}
+        
 
-        </div>
+        
 
         {/* Bottom */}
   
@@ -285,14 +285,14 @@ export function Footer() {
             <div className="flex flex-wrap items-center gap-6">
   
               <Link
-                href="/privacy"
+                href="/privacy-policy"
                 className="text-sm text-slate-500 transition hover:text-white"
               >
                 Privacy Policy
               </Link>
   
               <Link
-                href="/terms"
+                href="/terms-and-conditions"
                 className="text-sm text-slate-500 transition hover:text-white"
               >
                 Terms & Conditions

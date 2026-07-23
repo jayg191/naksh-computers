@@ -30,8 +30,8 @@ function ReviewCard({
 }) {
   return (
     <div
-      className={`group flex h-full min-h-[420px] flex-col justify-between rounded-[32px] border border-border bg-card p-6 shadow-md transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl sm:min-h-[460px] sm:p-9 ${className}`}
-    >
+  className={`group flex h-full min-h-[340px] flex-col justify-between rounded-[28px] border border-border bg-card p-5 shadow-md transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl md:min-h-[400px] md:p-7 lg:min-h-[460px] lg:rounded-[32px] lg:p-9 ${className}`}
+>
       <div>
         <div className="mb-6 flex items-center justify-between">
           <div className="flex gap-1 text-yellow-500">
@@ -52,7 +52,7 @@ function ReviewCard({
           </span>
         </div>
 
-        <p className="text-[15px] leading-8 text-muted-foreground sm:text-base sm:leading-9">
+        <p className="text-sm leading-7 text-muted-foreground sm:text-[15px] sm:leading-8 lg:text-base lg:leading-9">
           &ldquo;{review.quote}&rdquo;
         </p>
       </div>

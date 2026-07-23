@@ -230,7 +230,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "I had a great experience at Naksh Computer. They quickly diagnosed and fixed the screen display issue on my laptop with excellent professionalism. The repair was completed efficiently, and my laptop now works perfectly. The staff was knowledgeable, friendly, and explained everything clearly before starting the repair. Their service was honest, reasonably priced, and they used genuine quality parts. I truly appreciate their prompt support and attention to detail. If you're looking for reliable laptop repair, upgrades, or computer accessories, I highly recommend Naksh Computer for their excellent service and trustworthy customer care.",
+      "I had a great experience at Naksh Computer. They quickly diagnosed and fixed the screen display issue on my laptop with excellent professionalism. The repair was completed efficiently, and my laptop now works perfectly. The staff was knowledgeable, friendly, and explained everything clearly before starting the repair. Their service was honest, reasonably priced, and they used genuine quality parts...",
   },
   {
     id: "t2",
@@ -238,7 +238,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "Unmatched Expertise – Highly Recommended!​I am incredibly impressed with the level of service provided by Naksh Computers. If you are looking for a one-stop shop for all your technology needs, this is undoubtedly the place to go.What truly sets Naksh Computers apart is their large variety of products. Whether you are in the market for a high-performance laptop, a custom PC build, top-tier software solutions, or just the right accessories, they have an impressive inventory that covers everything from entry-level to professional-grade equipment.However, the real highlight is their unstoppable service...",
+      "Unmatched Expertise – Highly Recommended!​I am incredibly impressed with the level of service provided by Naksh Computers. If you are looking for a one-stop shop for all your technology needs, this is undoubtedly the place to go.What truly sets Naksh Computers apart is their large variety of products. Whether you are in the market for a high-performance laptop, a custom PC build, top-tier software solutions...",
   },
   {
     id: "t3",

@@ -226,27 +226,67 @@ export const BRANDS: BrandItem[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
-    author: "Hitesh Panchal",
+    author: "Sanvi Patel",
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "Quick laptop repair, genuine service, and a great overall experience. Fast turnaround with professional support.",
+      "I had a great experience at Naksh Computer. They quickly diagnosed and fixed the screen display issue on my laptop with excellent professionalism. The repair was completed efficiently, and my laptop now works perfectly. The staff was knowledgeable, friendly, and explained everything clearly before starting the repair. Their service was honest, reasonably priced, and they used genuine quality parts. I truly appreciate their prompt support and attention to detail. If you're looking for reliable laptop repair, upgrades, or computer accessories, I highly recommend Naksh Computer for their excellent service and trustworthy customer care.",
   },
   {
     id: "t2",
-    author: "Altafiya",
+    author: "Hardevsinh Chauhan",
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "Recovered important data from my old laptop and helped me set up my new laptop the same day. Reliable service for many years.",
+      "Unmatched Expertise – Highly Recommended!​I am incredibly impressed with the level of service provided by Naksh Computers. If you are looking for a one-stop shop for all your technology needs, this is undoubtedly the place to go.What truly sets Naksh Computers apart is their large variety of products. Whether you are in the market for a high-performance laptop, a custom PC build, top-tier software solutions, or just the right accessories, they have an impressive inventory that covers everything from entry-level to professional-grade equipment.However, the real highlight is their unstoppable service...",
   },
   {
     id: "t3",
-    author: "Harshita Arora",
+    author: "Ronak Dagli",
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "My computer was repaired within a day and has been working perfectly since. Fast, dependable and highly recommended.",
+      "I have purchased computer and  accessories from Naksh Computers. The quality of the product, price and the service all are top notch.The products were installed professionally and given the  basic training. I am happy with my purchase and recommend Naksh Computers for your future needs in relation with computer/hardware..",
+  },
+  {
+    id: "t4",
+    author: "Rajesh S",
+    role: "Google Review ⭐⭐⭐⭐⭐",
+    company: "Ahmedabad",
+    quote:
+      "Naksh computer service and products is wonderful and awesome No matter what product you buy from them, they will give you good quality products, good workmanship at a low price, and on top of that, the product you buy will last a long time....",
+  },    
+  {
+    id: "t5",
+    author: "Raj Kumar",
+    role: "Google Review ⭐⭐⭐⭐⭐",
+    company: "Ahmedabad",
+    quote:
+      "I have already purchased new and used laptops and so many other accessories from him. Service satisfaction is top notch. Sometimes offline prices of products are high but quality never compromised so my 1st preference for laptops and accessories.",
+  },
+  {
+    id: "t6",
+    author: "Aditya Vishwakarma",
+    role: "Google Review ⭐⭐⭐⭐⭐",
+    company: "Ahmedabad",
+    quote:
+      "Outstanding website for all your computer needs! It offers an intuitive interface, a vast selection of high-quality products, detailed specifications, and top-notch customer support. A perfect destination for tech enthusiasts and everyday users alike...",
+  },
+  {
+    id: "t7",
+    author: "Deep Sherthiya",
+    role: "Google Review ⭐⭐⭐⭐⭐",
+    company: "Ahmedabad",
+    quote:
+      "Naksh Computers delivers a premium experience with top-quality products and reliable service. Their refurbished laptops are in excellent condition at great prices. A trusted place for all computer and tech solutions.",
+  },
+  {
+    id: "t8",
+    author: "Darshan Patel",
+    role: "Google Review ⭐⭐⭐⭐⭐",
+    company: "Ahmedabad",
+    quote:
+      "Very amazing service. Got my laptop repaired within the given time and quick solution to my problems. Good work and efficient understanding of issues and cost efficient budgeting. Thank You.",
   },
 ];
 

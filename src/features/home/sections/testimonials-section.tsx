@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 import {
   ExternalLink,
   MapPin,
@@ -17,7 +21,121 @@ import { getInitials } from "@/utils";
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/place/Naksh+Computers/@23.0280114,72.5673057,17z/data=!4m8!3m7!1s0x395e848a43dedb61:0xf6f23f4d61a9000b!8m2!3d23.0280065!4d72.5698806!9m1!1b1!16s%2Fg%2F1pwfxx1b6?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D";
 
+function ReviewCard({
+  review,
+  className = "",
+}: {
+  review: (typeof TESTIMONIALS)[number];
+  className?: string;
+}) {
+  return (
+    <div
+      className={`group flex h-full min-h-[420px] flex-col justify-between rounded-[32px] border border-border bg-card p-6 shadow-md transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl sm:min-h-[460px] sm:p-9 ${className}`}
+    >
+      <div>
+        <div className="mb-6 flex items-center justify-between">
+          <div className="flex gap-1 text-yellow-500">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <Star key={i} className="h-4 w-4 fill-current sm:h-5 sm:w-5" />
+            ))}
+          </div>
+
+          <span className="flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+            <span className="text-[13px] font-black">
+              <span className="text-[#4285F4]">G</span>
+              <span className="text-[#EA4335]">o</span>
+              <span className="text-[#FBBC05]">o</span>
+              <span className="text-[#4285F4]">g</span>
+              <span className="text-[#34A853]">l</span>
+              <span className="text-[#EA4335]">e</span>
+            </span>
+          </span>
+        </div>
+
+        <p className="text-[15px] leading-8 text-muted-foreground sm:text-base sm:leading-9">
+          &ldquo;{review.quote}&rdquo;
+        </p>
+      </div>
+
+      <div className="mt-8 border-t border-border pt-6">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-sm font-bold text-white shadow-sm sm:h-12 sm:w-12">
+            {getInitials(review.author)}
+          </div>
+
+          <div className="min-w-0">
+            <h4 className="truncate font-bold">{review.author}</h4>
+            <p className="text-sm text-muted-foreground">{review.company}</p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
+            <span className="text-[11px] font-semibold uppercase tracking-wide text-green-700 sm:text-xs">
+              Verified Google Review
+            </span>
+          </div>
+
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition hover:text-blue-700 hover:underline"
+          >
+            View on Google
+            <ExternalLink className="h-4 w-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function TestimonialsSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = cardRefs.current.findIndex(
+              (el) => el === entry.target
+            );
+            if (index !== -1) setActiveIndex(index);
+          }
+        });
+      },
+      {
+        root: container,
+        threshold: 0.6,
+      }
+    );
+
+    cardRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToIndex = (index: number) => {
+    const card = cardRefs.current[index];
+    if (card) {
+      card.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  };
+
   return (
     <Section id="reviews" background="muted">
       <Container>
@@ -85,72 +203,56 @@ export function TestimonialsSection() {
           </div>
         </AnimateOnScroll>
 
-        {/* Review Cards */}
-        <div className="grid grid-cols-2 gap-5 sm:gap-8">
+        {/* Review Cards — Desktop grid (unchanged) */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8">
           {TESTIMONIALS.map((review, index) => (
             <AnimateOnScroll key={review.id} delay={index * 0.08}>
-              <div className="group flex h-full min-h-[420px] flex-col justify-between rounded-[32px] border border-border bg-card p-6 shadow-md transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl sm:min-h-[460px] sm:p-9">
-                <div>
-                  <div className="mb-6 flex items-center justify-between">
-                    <div className="flex gap-1 text-yellow-500">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} className="h-4 w-4 fill-current sm:h-5 sm:w-5" />
-                      ))}
-                    </div>
-
-                    <span className="flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                      <span className="text-[13px] font-black">
-                        <span className="text-[#4285F4]">G</span>
-                        <span className="text-[#EA4335]">o</span>
-                        <span className="text-[#FBBC05]">o</span>
-                        <span className="text-[#4285F4]">g</span>
-                        <span className="text-[#34A853]">l</span>
-                        <span className="text-[#EA4335]">e</span>
-                      </span>
-                    </span>
-                  </div>
-
-                  <p className="text-[15px] leading-8 text-muted-foreground sm:text-base sm:leading-9">
-                    “{review.quote}”
-                  </p>
-                </div>
-
-                <div className="mt-8 border-t border-border pt-6">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-sm font-bold text-white shadow-sm sm:h-12 sm:w-12">
-                      {getInitials(review.author)}
-                    </div>
-
-                    <div className="min-w-0">
-                      <h4 className="truncate font-bold">{review.author}</h4>
-                      <p className="text-sm text-muted-foreground">
-                        {review.company}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-                    <div className="flex items-center gap-2">
-                      <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-                      <span className="text-[11px] font-semibold uppercase tracking-wide text-green-700 sm:text-xs">
-                        Verified Google Review
-                      </span>
-                    </div>
-
-                    <a
-                      href={GOOGLE_MAPS_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition hover:text-blue-700 hover:underline"
-                    >
-                      View on Google
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <ReviewCard review={review} />
             </AnimateOnScroll>
           ))}
+        </div>
+
+        {/* Review Cards — Tablet & Mobile carousel */}
+        <div className="lg:hidden">
+          <div
+            ref={scrollRef}
+            role="region"
+            aria-label="Customer reviews carousel"
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {TESTIMONIALS.map((review, index) => (
+              <div
+                key={review.id}
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
+                role="group"
+                aria-label={`Review ${index + 1} of ${TESTIMONIALS.length}`}
+                aria-current={activeIndex === index}
+                className="w-[88vw] shrink-0 snap-center sm:w-[85vw]"
+              >
+                <ReviewCard review={review} />
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination dots */}
+          <div className="mt-6 flex items-center justify-center gap-2">
+            {TESTIMONIALS.map((review, index) => (
+              <button
+                key={review.id}
+                type="button"
+                onClick={() => scrollToIndex(index)}
+                aria-label={`Go to review ${index + 1}`}
+                aria-current={activeIndex === index}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  activeIndex === index
+                    ? "w-6 bg-blue-600"
+                    : "w-2 bg-border hover:bg-muted-foreground/40"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA */}

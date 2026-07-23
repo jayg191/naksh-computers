@@ -246,7 +246,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "I have purchased computer and  accessories from Naksh Computers. The quality of the product, price and the service all are top notch.The products were installed professionally and given the  basic training. I am happy with my purchase and recommend Naksh Computers for your future needs in relation with computer/hardware..",
+      "I have purchased computer and  accessories from Naksh Computers. The quality of the product, price and the service all are top notch.The products were installed professionally and given the  basic training. I am happy with my purchase and recommend Naksh Computers for your future needs in relation with computer/hardware...",
   },
   {
     id: "t4",
@@ -254,7 +254,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "Naksh computer service and products is wonderful and awesome No matter what product you buy from them, they will give you good quality products, good workmanship at a low price, and on top of that, the product you buy will last a long time....",
+      "Naksh computer service and products is wonderful and awesome No matter what product you buy from them, they will give you good quality products, good workmanship at a low price, and on top of that, the product you buy will last a long time...",
   },    
   {
     id: "t5",
@@ -262,7 +262,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "I have already purchased new and used laptops and so many other accessories from him. Service satisfaction is top notch. Sometimes offline prices of products are high but quality never compromised so my 1st preference for laptops and accessories.",
+      "I have already purchased new and used laptops and so many other accessories from him. Service satisfaction is top notch. Sometimes offline prices of products are high but quality never compromised so my 1st preference for laptops and accessories...",
   },
   {
     id: "t6",
@@ -278,7 +278,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "Naksh Computers delivers a premium experience with top-quality products and reliable service. Their refurbished laptops are in excellent condition at great prices. A trusted place for all computer and tech solutions.",
+      "Naksh Computers delivers a premium experience with top-quality products and reliable service. Their refurbished laptops are in excellent condition at great prices. A trusted place for all computer and tech solutions...",
   },
   {
     id: "t8",
@@ -286,7 +286,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Google Review ⭐⭐⭐⭐⭐",
     company: "Ahmedabad",
     quote:
-      "Very amazing service. Got my laptop repaired within the given time and quick solution to my problems. Good work and efficient understanding of issues and cost efficient budgeting. Thank You.",
+      "Very amazing service. Got my laptop repaired within the given time and quick solution to my problems. Good work and efficient understanding of issues and cost efficient budgeting. Thank You...",
   },
 ];
 
